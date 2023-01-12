@@ -5,7 +5,6 @@ class CreateTools < ActiveRecord::Migration[6.1]
       t.integer :price
       t.string :description 
       t.string :condition
-      t.timstamps
     end
   end
 end
