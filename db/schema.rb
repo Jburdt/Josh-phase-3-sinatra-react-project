@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2023_01_11_224217) do
 
   create_table "tools", force: :cascade do |t|
     t.string "name"
-    t.integer "price"
+    t.integer "price", default: 0
     t.string "description"
     t.string "condition"
   end
