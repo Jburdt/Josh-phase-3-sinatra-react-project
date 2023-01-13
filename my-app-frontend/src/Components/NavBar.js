@@ -13,7 +13,7 @@ function NavBar() {
 
 	return (
 		<header>
-			<h3>Burd's Tool Shop</h3>
+			<h3>Burd's Tool Shop Rentals</h3>
 			<nav ref={navRef}>
 				<a href="/#">Home</a>
 				<a href="/#">Tools</a>
