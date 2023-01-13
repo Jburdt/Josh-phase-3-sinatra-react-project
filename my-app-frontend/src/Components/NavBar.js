@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaBars, FaTimes } from "react-icons/fa";
 import { useRef } from 'react';
+import "../Styles/main.css"
 
 const NavBar = () => {
 
@@ -12,7 +13,7 @@ const NavBar = () => {
 
   return (
     <header>
-      <h3>Logo</h3>
+      <h3>Burd's Tool Shop</h3>
       <nav>
           <a href={navRef}>Home</a>
           <a href='/#'>Tools</a>

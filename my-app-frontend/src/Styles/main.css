@@ -8,8 +8,8 @@
 }
 
 :root{
-  --mainColor: #29335C;
-  --mainColor: #1e3baf;
+  --mainColor: #5672e0;
+  --mainColorLight: #6a64da;
   --secondaryColor: #DB2B39;
   --textColor: #eee;
 }
@@ -43,9 +43,10 @@ header .nav-btn{
   color: var(--textColor);
   visibility: hidden;
   opacity: 0;
+  font-size: 1.8rem;
 }
 
-@media only screen and (mad-width: 1024px){
+@media only screen and (max-width: 1024px){
   header .nav-btn{
     visibility: visible;
     opacity: 1;
@@ -58,6 +59,7 @@ header .nav-btn{
     height: 100%;
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
@@ -65,4 +67,19 @@ header .nav-btn{
     transition: 1s;
     transform: translate(-100vh);
   }
+
+  header.responsive_nav{
+    transform: none;
+  }
+
+  nav .nav-close-btn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+
+  nav a{
+    font-size: 1.5rem;
+  }
+
 }
