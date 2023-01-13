@@ -1,33 +1,37 @@
 import React from 'react'
+
+import { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { useRef } from 'react';
-import "../Styles/main.css"
+import "../Styles/main.css";
 
-const NavBar = () => {
+function NavBar() {
+	const navRef = useRef();
 
-  const navRef = useRef();
+	const showNavBar = () => {
+		navRef.current.classList.toggle("responsive_nav");
+	};
 
-  const showNavBar = () => {
-    navRef.current.classlist.toggle('responsive_nav');
-  }
-
-  return (
-    <header>
-      <h3>Burd's Tool Shop</h3>
-      <nav>
-          <a href={navRef}>Home</a>
-          <a href='/#'>Tools</a>
-          <a href='/#'>Contractors</a>
-          <a href='/#'>Rented</a>
-          <button className="nav-btn nav-close-btn" onClick={showNavBar}>
-            <FaTimes/>
-          </button>
-      </nav>
-      <button className="nav-btn" onClick={showNavBar}>
-        <FaBars />
-      </button>
-    </header>
-  )
+	return (
+		<header>
+			<h3>Burd's Tool Shop</h3>
+			<nav ref={navRef}>
+				<a href="/#">Home</a>
+				<a href="/#">Tools</a>
+				<a href="/#">Contractors</a>
+				<a href="/#">About me</a>
+				<button
+					className="nav-btn nav-close-btn"
+					onClick={showNavBar}>
+					<FaTimes />
+				</button>
+			</nav>
+			<button className="nav-btn" onClick={showNavBar}>
+				<FaBars />
+			</button>
+		</header>
+	);
 }
 
 export default NavBar;
+
+
