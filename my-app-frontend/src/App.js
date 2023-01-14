@@ -9,7 +9,6 @@ import ToolList from './Components/ToolList';
 
 const App = () => {
 
-  
   return (
     <Router>
      <NavBar />
