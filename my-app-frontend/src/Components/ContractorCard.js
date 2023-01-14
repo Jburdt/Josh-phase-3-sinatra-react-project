@@ -10,4 +10,4 @@ const ContractorCard = ({ name, phone_number, company }) => {
   )
 }
 
-export default ContractorCard
+export default ContractorCard;
