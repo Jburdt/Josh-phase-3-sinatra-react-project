@@ -16,8 +16,8 @@ function NavBar() {
 			<h3>Burd's Tool Shop Rentals</h3>
 			<nav ref={navRef}>
 				<a href="/#">Home</a>
-				<a href="/#">Tools</a>
-				<a href="/#">Contractors</a>
+				<a href="/tools">Tools</a>
+				<a href="/#">Tool Form</a>
 				<a href="/#">About me</a>
 				<button
 					className="nav-btn nav-close-btn"

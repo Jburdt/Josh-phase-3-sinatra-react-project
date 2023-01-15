@@ -8,14 +8,14 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/tools" do 
-    tools = Tool.all.order(:name)
+    tools = Tool.all
     tools.to_json
   end
 
   patch "/tools/:id" do 
     tool = Tools.find(params[:id])
-    tool.update(name: params[:name])
-    tool.to_json( include: { tool: {only: [:tool]} })
+    tool.update(name: params[:name], price: params[:price], description: params[:description], condition: params[:condition])
+    tool.to_json
   end
 
   delete "/tools/:id" do
