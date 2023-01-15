@@ -9,7 +9,7 @@ class ApplicationController < Sinatra::Base
 
   get "/tools" do 
     tools = Tool.all.order(:name)
-    tools.to_json( include: { tool: {only: [:tool]} })
+    tools.to_json
   end
 
   patch "/tools/:id" do 
