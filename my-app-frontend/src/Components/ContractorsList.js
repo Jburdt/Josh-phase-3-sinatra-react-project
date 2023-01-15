@@ -1,4 +1,5 @@
 import React from 'react'
+import ContractorCard from './ContractorCard';
 
 const ContractorsList = () => {
   return (

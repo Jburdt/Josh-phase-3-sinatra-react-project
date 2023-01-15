@@ -3,9 +3,9 @@ import React from 'react'
 const ContractorCard = ({ name, phone_number, company }) => {
   return (
     <div>ContractorCard
-      <p className='contractor-name'>{name}</p>
-      <p className='contractor-address'>{address}</p>
-      <p className='contractor-company'>{company}</p>
+      <p className='contractor-name'>{null}</p>
+      <p className='contractor-address'>{null}</p>
+      <p className='contractor-company'>{null}</p>
     </div>
   )
 }
