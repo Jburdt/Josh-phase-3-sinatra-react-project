@@ -5,6 +5,7 @@ class CreateTools < ActiveRecord::Migration[6.1]
       t.integer :price, default: 0.0
       t.string :description 
       t.string :condition
+      t.string :img_url
     end
   end
 end

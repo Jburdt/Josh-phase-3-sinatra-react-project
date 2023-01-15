@@ -1,16 +1,16 @@
 import './App.css';
 import React, { useEffect, useState } from "react";
-import NavBar from './NavBar';
+import NavBar from './Components/NavBar';
 import {  BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from './Home';
-import ToolList from './ToolList';
-import ContractorsList from './ContractorsList';
+import Home from './Components/Home';
+import ToolList from './Components/ToolList';
+import ContractorsList from './Components/ContractorsList';
 
 
 
 const App = () => {
 
-  const [tools, setTools] = useState
+  const [tools, setTools] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:9292/tools")
