@@ -3,8 +3,8 @@ class ApplicationController < Sinatra::Base
   
   # Add your routes here
   post "/tools" do
-    tools = Tool.create(name: params[:item], price: params[:price], description: params[:description], condition: params[:condition])
-    tools.to_json( include: { tool: {only: [:tool]} })
+    tool = Tool.create(name: params[:item], price: params[:price], description: params[:description], condition: params[:condition])
+    tool.to_json( include: { tool: {only: [:tool]} })
   end
 
   get "/tools" do 
@@ -13,12 +13,15 @@ class ApplicationController < Sinatra::Base
   end
 
   patch "/tools/:id" do 
-    tools = Tools.find(params[:id])
-    tools.update(name: params[:name])
-    tools.to_json( include: { tool: {only: [:tool]} })
+    tool = Tools.find(params[:id])
+    tool.update(name: params[:name])
+    tool.to_json( include: { tool: {only: [:tool]} })
   end
 
-  
+  delete "/tools/:id" do
+    tool = Tool.find(params[:id])
+    tool.destroy
+    tool.to_json
+  end
     
-
 end
