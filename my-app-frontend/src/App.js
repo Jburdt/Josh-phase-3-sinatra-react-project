@@ -34,7 +34,7 @@ const App = () => {
      <NavBar />
       <Routes> 
       <Route exact path='/' element={<Home />} />
-      <Route exact path='/ToolList' element={<ToolList tools = {tools} />}/>
+      <Route exact path='/tools' element={<ToolList tools = {tools} />}/>
       <Route exact path='/add-new/tools' element={<NewToolForm addTool ={addTool}/>}/>
     </Routes>
     </Router>
