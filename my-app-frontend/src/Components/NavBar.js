@@ -17,8 +17,7 @@ function NavBar() {
 			<nav ref={navRef}>
 				<a href="/#">Home</a>
 				<a href="/tools">Tools</a>
-				<a href="/#">Tool Form</a>
-				<a href="/#">About me</a>
+				<a href="/#">Add Tool Form</a>
 				<button
 					className="nav-btn nav-close-btn"
 					onClick={showNavBar}>

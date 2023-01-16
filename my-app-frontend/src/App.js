@@ -28,7 +28,7 @@ const App = () => {
     <Router>
      <NavBar />
       <Routes> 
-      <Route exact path='/' element={<Home />}/>
+      <Route exact path='/' element={<Home />} />
       <Route exact path='/ToolList' element={<ToolList tools = {tools} />}/>
       <Route exact path='/contractorList' element={<ContractorsList  />}/>
     </Routes>

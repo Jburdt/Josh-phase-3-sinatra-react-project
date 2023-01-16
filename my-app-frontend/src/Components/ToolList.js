@@ -8,7 +8,7 @@ const ToolList = ({ tools }) => {
             <ul className='cardsholder'>
                 {tools.map((tool) => {
                   return( 
-                    <toolsCard 
+                    <ToolCard
                     tool={tool}
                     key={tool.id}
                     />
