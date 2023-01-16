@@ -6,9 +6,6 @@ import Home from './Components/Home';
 import ToolList from './Components/ToolList';
 import NewToolForm from './Components/NewToolForm';
 
-
-
-
 const App = () => {
 
   const [tools, setTools] = useState([]);
@@ -29,13 +26,17 @@ const App = () => {
     setTools([...tools, tool])
   };
 
+  const deletedTool = (id) => {
+    setTools(tools.filter(tool => tool.id !== id))
+  }
+
   return (
     <Router>
      <NavBar />
       <Routes> 
       <Route exact path='/' element={<Home />} />
-      <Route exact path='/tools' element={<ToolList tools = {tools} />}/>
-      <Route exact path='/add-new/tools' element={<NewToolForm addTool ={addTool}/>}/>
+      <Route exact path='/tools' element={<ToolList deletedTool= {deletedTool} tools = {tools} />}/>
+      <Route exact path='/add-new/tools' element={<NewToolForm handleSubmit = {addTool} />} />
     </Routes>
     </Router>
   );

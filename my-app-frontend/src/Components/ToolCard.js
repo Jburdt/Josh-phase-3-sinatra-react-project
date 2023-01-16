@@ -1,6 +1,14 @@
 import React from 'react';
 
-const ToolCard = ({ tool }) => {
+const ToolCard = ({ tool, deletedTool }) => {
+
+  function handleDelete() {
+    fetch(`http://localhost:9292/tools/${tool.id}`, {
+      method: "DELETE",
+    })
+      .then((r) => r.json())
+      // .then((deletedTool) => onDeletedTool(deletedTool));
+  }
 
 
   return (
@@ -11,6 +19,7 @@ const ToolCard = ({ tool }) => {
           <img className="tool-image" src={tool.img_url} alt={"tools"}/>
           <p className='description'>{tool.description}</p>
           <p className='condition'>{tool.condition}</p>
+          <button onClick={handleDelete} type='delete' className='update info'>Rent Me!</button>
           <br />
       </div>
     </div>
