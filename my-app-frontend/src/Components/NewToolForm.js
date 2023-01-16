@@ -47,7 +47,7 @@ const NewToolForm = ({ addTool }) => {
         color="default"
         className="upload"
         >
-        Upload
+        Upload New Tool
         </button>
     </form>
   </div>
