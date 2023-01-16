@@ -4,7 +4,8 @@ import NavBar from './Components/NavBar';
 import {  BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from './Components/Home';
 import ToolList from './Components/ToolList';
-import ContractorsList from './Components/ContractorsList';
+import NewToolForm from './Components/NewToolForm';
+
 
 
 
@@ -24,13 +25,17 @@ const App = () => {
     )
   }
 
+  const addTool = (tool) => {
+    setTools([...tools, tool])
+  };
+
   return (
     <Router>
      <NavBar />
       <Routes> 
       <Route exact path='/' element={<Home />} />
       <Route exact path='/ToolList' element={<ToolList tools = {tools} />}/>
-      <Route exact path='/contractorList' element={<ContractorsList  />}/>
+      <Route exact path='/add-new/tools' element={<NewToolForm addTool ={addTool}/>}/>
     </Routes>
     </Router>
   );

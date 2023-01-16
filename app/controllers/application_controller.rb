@@ -2,7 +2,7 @@ class ApplicationController < Sinatra::Base
   set :default_content_type, 'application/json'
   
   # Add your routes here
-  post "/tools" do
+  post "/add-new/tools" do
     tool = Tool.create(name: params[:item], price: params[:price], description: params[:description], condition: params[:condition])
     tool.to_json( include: { tool: {only: [:tool]} })
   end
