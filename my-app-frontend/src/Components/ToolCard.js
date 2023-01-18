@@ -20,7 +20,7 @@ const ToolCard = ({ tool, deletedTool }) => {
           <p className='description'>{tool.description}</p>
           <p className='condition'>{tool.condition}</p>
           <p className='price'>${tool.price}</p>
-          <button onClick={handleDelete} type='delete' className='update info'>Rent Me!</button>
+          <button onClick={handleDelete} type='delete' className='rent-btn'>Rent Me!</button>
           <br></br>
       </div>
     </div>
