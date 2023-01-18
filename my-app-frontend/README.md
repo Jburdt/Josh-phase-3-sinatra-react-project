@@ -9,6 +9,7 @@ This project was built to show case what I have learned during Phase 3 at Flatir
   - seeding
   - Sinatra
   - Active record query methods
+  - Ruby
 
 ### Requirements 
 * Ruby version 2.6.1
