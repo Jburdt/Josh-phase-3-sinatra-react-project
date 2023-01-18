@@ -22,8 +22,8 @@ const App = () => {
     )
   }
 
-  const addTool = (tool) => {
-    setTools([...tools, tool])
+  const addTool = (newTool) => {
+    setTools([...tools, newTool])
   };
 
   const deletedTool = (id) => {
@@ -36,7 +36,7 @@ const App = () => {
       <Routes> 
       <Route exact path='/' element={<Home />} />
       <Route exact path='/tools' element={<ToolList deletedTool= {deletedTool} tools = {tools} />}/>
-      <Route exact path='/add-new/tools' element={<NewToolForm handleSubmit = {addTool} />} />
+      <Route exact path='/add-new/tools' element={<NewToolForm handleSubmit = {addTool} tools = {tools} />} />
     </Routes>
     </Router>
   );

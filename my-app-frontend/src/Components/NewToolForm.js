@@ -1,20 +1,22 @@
 import React, { useState } from 'react';
+// import { useHistory }from "react-router-dom";
 
-const NewToolForm = ({ addTool }) => {
+const NewToolForm = ({ addTool, tools }) => {
 
   const [name, SetName] = useState('');
   const [img_url, SetImg_url] = useState('');
   const [description, SetDescription] = useState('');
   const [price, SetPrice] = useState('');
   const [condition, SetCondition] = useState('');
+  // let history = useHistory();
 
-  const [toolData, setToolData] =useState({
-    id: 0,
-    name: "",
-    img_url: "",
-    condition: "",
-    description: ""
-  })
+  // const [toolData, setToolData] =useState({
+  //   id: 0,
+  //   name: "",
+  //   img_url: "",
+  //   condition: "",
+  //   description: ""
+  // })
 
   const handleNameChange = (e) => {
     SetName(e.target.value)
@@ -36,6 +38,14 @@ const NewToolForm = ({ addTool }) => {
     SetCondition(e.target.value)
   };
 
+  const reset = () =>{
+    SetName("")
+    SetImg_url("")
+    SetDescription("")
+    SetCondition("")
+    SetPrice("")
+  };
+
   // function handleChange(event) {
   //   setToolData({
   //     ...toolData,
@@ -43,25 +53,29 @@ const NewToolForm = ({ addTool }) => {
   //   });
   // } 
   
-  // const handleSubmit = (e) => {
-  //   e.preventDefault()
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-  //   fetch("http://http://localhost:9292/tools", {
-  //     method: 'POST',
-  //     headers: {
-  //       "Accept": "application/json",
-  //       "Content-Type": "application/json"
-  //     },
-  //     body: JSON.stringify(toolData)
-  //   })
-  //   .then(r => r.json())
-  //   .then(addTool)
-  // }
+    let newTool = { name: name, img_url: img_url, condition: img_url, description: description };
+
+    fetch("http://http://localhost:9292/tools", {
+      method: 'POST',
+      headers: {
+        "Accept": "application/json",
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(newTool)
+    })
+    .then(r => r.json())
+    .then(data => addTool(data))
+    // .then(addTool(data))
+    .then(reset())
+  }
   
   return (
   <div>
       <p>Enter the followin information to add another tool.</p>
-    <form className="new-tool" noValidate autoComplete="off">
+    <form onSubmit={handleSubmit} className="new-tool" noValidate autoComplete="off" autoFocus={ true }>
       <label htmlFor='name'/>
       <input id='name' onChange={handleNameChange} type='text' value={name} placeholder="Tool Name..."  />
       <input id='img_url' onChange={handleImgChange} type='text' value={img_url} placeholder="Tool Image Link..."  />

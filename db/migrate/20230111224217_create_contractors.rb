@@ -4,7 +4,9 @@ class CreateContractors < ActiveRecord::Migration[6.1]
       t.string :name
       t.string :phone_number
       t.string :company
+      t.string :reviews
       t.integer :tool_id
+      t.timestamps
     end
   end
 end

@@ -1,3 +1,3 @@
 class Tool < ActiveRecord::Base
-  # belongs_to :contractors
+  has_many :contractors
 end

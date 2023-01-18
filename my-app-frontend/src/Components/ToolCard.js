@@ -21,7 +21,7 @@ const ToolCard = ({ tool, deletedTool }) => {
           <p className='condition'>{tool.condition}</p>
           <p className='price'>${tool.price}</p>
           <button onClick={handleDelete} type='delete' className='update info'>Rent Me!</button>
-          <br />
+          <br></br>
       </div>
     </div>
    </> 
