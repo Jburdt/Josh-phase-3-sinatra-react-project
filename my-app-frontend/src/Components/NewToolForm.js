@@ -58,7 +58,7 @@ const NewToolForm = ({ addTool, tools }) => {
 
     let newTool = { name: name, img_url: img_url, condition: img_url, description: description };
 
-    fetch("http://http://localhost:9292/tools", {
+    fetch("http://localhost:9292/tools", {
       method: 'POST',
       headers: {
         "Accept": "application/json",
