@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import { useHistory }from "react-router-dom";
 
 const NewToolForm = ({ addTool, tools }) => {
 
@@ -8,15 +7,6 @@ const NewToolForm = ({ addTool, tools }) => {
   const [description, SetDescription] = useState('');
   const [price, SetPrice] = useState('');
   const [condition, SetCondition] = useState('');
-  // let history = useHistory();
-
-  // const [toolData, setToolData] =useState({
-  //   id: 0,
-  //   name: "",
-  //   img_url: "",
-  //   condition: "",
-  //   description: ""
-  // })
 
   const handleNameChange = (e) => {
     SetName(e.target.value)
@@ -68,13 +58,12 @@ const NewToolForm = ({ addTool, tools }) => {
     })
     .then(r => r.json())
     .then(data => addTool(data))
-    // .then(addTool(data))
     .then(reset())
   }
   
   return (
   <div>
-      <p>Enter the followin information to add another tool.</p>
+      <h2>Enter the followin information to add another tool:</h2>
     <form onSubmit={handleSubmit} className="new-tool" noValidate autoComplete="off" autoFocus={ true }>
       <label htmlFor='name'/>
       <input id='name' onChange={handleNameChange} type='text' value={name} placeholder="Tool Name..."  />

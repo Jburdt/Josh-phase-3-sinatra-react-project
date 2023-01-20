@@ -1,3 +1,3 @@
 class Tool < ActiveRecord::Base
-  has_many :contractors
+  has_many :categories
 end

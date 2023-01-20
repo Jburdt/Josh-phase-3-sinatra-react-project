@@ -10,24 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_01_11_224217) do
-
-  create_table "contractors", force: :cascade do |t|
-    t.string "name"
-    t.string "phone_number"
-    t.string "company"
-    t.string "review"
-    t.integer "tool_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "tools", force: :cascade do |t|
-    t.string "name"
-    t.integer "price", default: 0
-    t.string "description"
-    t.string "condition"
-    t.string "img_url"
-  end
+ActiveRecord::Schema.define(version: 0) do
 
 end
