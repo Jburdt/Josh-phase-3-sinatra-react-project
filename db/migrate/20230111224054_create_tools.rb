@@ -6,6 +6,7 @@ class CreateTools < ActiveRecord::Migration[6.1]
       t.string :description 
       t.string :condition
       t.string :img_url
+      t.integer :category_id
     end
   end
 end

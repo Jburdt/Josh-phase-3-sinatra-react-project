@@ -1,3 +1,3 @@
 class Tool < ActiveRecord::Base
-  has_many :categories
+  belongs_to :categories
 end

@@ -1,3 +1,3 @@
 class Category < ActiveRecord::Base
-  belongs_to :tool
+  has_many :tools
 end
