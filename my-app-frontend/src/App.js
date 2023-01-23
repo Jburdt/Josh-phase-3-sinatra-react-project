@@ -9,7 +9,7 @@ import NewToolForm from './Components/NewToolForm';
 const App = () => {
 
   const [tools, setTools] = useState([]);
-  const [categories, setCategories] = useState([]);
+  // const [categories, setCategories] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:9292/tools")
@@ -33,7 +33,7 @@ const App = () => {
   }
 
   // useEffect(() => {
-
+  //   fetch('http://localhost:9292/categories')
   // }, [])
 
   return (
@@ -42,7 +42,7 @@ const App = () => {
       <Routes> 
       <Route exact path='/' element={<Home />} />
       <Route exact path='/tools' element={<ToolList handleDeletedTool={ handleDeletedTool } tools = { tools } />}/>
-      <Route exact path='/add-new/tools' element={<NewToolForm handleSubmit = {addTool} tools = {tools} categories = {categories} />} />
+      <Route exact path='/add-new/tools' element={<NewToolForm handleSubmit = {addTool} tools = {tools} /*categories = {categories}*/ />} />
     </Routes>
     </Router>
   );

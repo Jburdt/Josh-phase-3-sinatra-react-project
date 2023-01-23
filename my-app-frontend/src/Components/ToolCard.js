@@ -19,8 +19,9 @@ const ToolCard = ({ tool, handleDeletedTool }) => {
           <p className='description'>{tool.description}</p>
           <p className='condition'>{tool.condition}</p>
           <p className='price'>${tool.price}</p>
+          {/* <p className='category'>{tool.category}</p> */}
           <button onClick={(handleDelete)} type='submit' className='delete'>Rent Me!</button>
-          <br></br>
+          {/* <br></br> */}
       </div>
     </div>
    </> 

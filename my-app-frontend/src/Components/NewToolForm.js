@@ -55,9 +55,9 @@ const NewToolForm = ({ addTool, categories}) => {
   }
   
   return (
-  <div>
-      <h2>Enter the followin information to add another tool:</h2>
-    <form onSubmit={handleSubmit} className="new-tool" noValidate autoComplete="off" autoFocus={ true }>
+  <div className='new-form'>
+      <h2 className='input_h2'>Enter the following information to add another tool:</h2>
+    <form onSubmit={handleSubmit} className="new_tool" noValidate autoComplete="off" autoFocus={ true }>
       <label htmlFor='name'/>
       <input id='name' onChange={handleNameChange} type='text' value={name} placeholder="Tool Name..."  />
       <input id='img_url' onChange={handleImgChange} type='text' value={img_url} placeholder="Tool Image Link..."  />
@@ -65,9 +65,11 @@ const NewToolForm = ({ addTool, categories}) => {
       <input id='price' onChange={handlePriceChange} type='text' value={price} placeholder="Tool price..."  />
       <input id='condition' onChange={handleConditionChange} type='text' value={condition} placeholder="Tool condition..."  />
       <select>
-        {categories.map(category => {
-          <option key={category}>{category}</option>
-        })}
+        <option value="Hand Tool"> Hand Tool</option>
+        <option value="Power Tool"> Power Tool</option>
+        {/* {categories.map(category => {
+          <option key={category}> </option>
+        })} */}
       </select>
         <button type="submit" variant="contained" color="default" className="upload">Upload New Tool</button>
     </form>
