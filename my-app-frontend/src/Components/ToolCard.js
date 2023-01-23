@@ -7,7 +7,7 @@ const ToolCard = ({ tool, deletedTool }) => {
       method: "DELETE",
     })
       .then((r) => r.json())
-      // .then((deletedTool) => onDeletedTool(deletedTool));
+      .then((deletedTool) => console.log("deleted tool"));
   }
 
 
