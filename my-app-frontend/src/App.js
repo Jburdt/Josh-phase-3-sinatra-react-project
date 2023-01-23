@@ -9,6 +9,7 @@ import NewToolForm from './Components/NewToolForm';
 const App = () => {
 
   const [tools, setTools] = useState([]);
+  const [categories, setCategories] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:9292/tools")
@@ -26,23 +27,22 @@ const App = () => {
     setTools([...tools, newTool])
   };
 
-  // const deletedTool = (id) => {
-  //   setTools(tools.filter(tool => tool.id !== id))
-  // }
-
   const handleDeletedTool = (deletedTool) => {
     const filteredTools = tools.filter(tool => tool.id !== deletedTool.id)
     setTools(filteredTools)
   }
 
+  // useEffect(() => {
+
+  // }, [])
 
   return (
     <Router>
      <NavBar />
       <Routes> 
       <Route exact path='/' element={<Home />} />
-      <Route exact path='/tools' element={<ToolList /*deletedTool= {deletedTool}*/ handleDeletedTool={ handleDeletedTool } tools = { tools } />}/>
-      <Route exact path='/add-new/tools' element={<NewToolForm handleSubmit = {addTool} tools = {tools} />} />
+      <Route exact path='/tools' element={<ToolList handleDeletedTool={ handleDeletedTool } tools = { tools } />}/>
+      <Route exact path='/add-new/tools' element={<NewToolForm handleSubmit = {addTool} tools = {tools} categories = {categories} />} />
     </Routes>
     </Router>
   );

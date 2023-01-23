@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const NewToolForm = ({ addTool, tools }) => {
+const NewToolForm = ({ addTool, categories}) => {
 
   const [name, SetName] = useState('');
   const [img_url, SetImg_url] = useState('');
@@ -35,13 +35,6 @@ const NewToolForm = ({ addTool, tools }) => {
     SetCondition("")
     SetPrice("")
   };
-
-  // function handleChange(event) {
-  //   setToolData({
-  //     ...toolData,
-  //     [event.target.id]: event.target.value,
-  //   });
-  // } 
   
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -71,6 +64,11 @@ const NewToolForm = ({ addTool, tools }) => {
       <input id='description' onChange={handleDescriptionChange} type='text' value={description} placeholder="Tool description..."  />
       <input id='price' onChange={handlePriceChange} type='text' value={price} placeholder="Tool price..."  />
       <input id='condition' onChange={handleConditionChange} type='text' value={condition} placeholder="Tool condition..."  />
+      <select>
+        {categories.map(category => {
+          <option key={category}>{category}</option>
+        })}
+      </select>
         <button type="submit" variant="contained" color="default" className="upload">Upload New Tool</button>
     </form>
   </div>
