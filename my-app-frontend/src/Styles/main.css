@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap");
 
+	/* NAVBAR CSS BELOW */
+
 * {
 	padding: 0;
 	margin: 0;
@@ -89,66 +91,11 @@ nav {
 	}
 }
 
-/* NavBar Css above  */
+/* NAVBAR CSS ABOVE  */
 
-/* card css below */
-/* .card-container{
-width: 300px;
-overflow: hidden;
-box-shadow: 0px 0px 15px -5px;
-transition: 0.3sec;
-animation: ease-in;
-}
+/* -------------------------------------------------------- */
 
-.card-container :hover{
-  transform: scale(1.1);
-  box-shadow: 0px 0px 15px 0px;
-}
-
-.image-container img{
-  overflow: hidden;
-  height: 200px;
-}
-
-.card-content{
-  margin: 1rem;
-  margin-top: 0.5rem;
-}
-
-h3,p{
-  margin: 0;
-  padding: 0;
-}
-
-.card-title{
-  margin-bottom: 0.5rem;
-}
-
-.btn{
-  display: flex;
-  justify-content: center;
-}
-.btn button{
-  padding: 0.5rem;
-  background-color: white;
-  border: none;
-  transition: 0.2s;
-  margin-bottom: 0.5rem;
-  border-radius: 3px;
-
-}
-
-.btn:hover{
-  background: rgba(27, 156, 252, 0.1);
-  transform: scale(1.0);
-}
-
-a{
-  text-transform: uppercase;
-  color: #1B9CFC;
-  text-decoration: none;
-  font-weight: bold;
-} */
+/* NEW FORM CSS BELOW */
 
 .rent-btn {
 	width: 50px;
@@ -178,3 +125,42 @@ input{
   justify-content: center;
   align-items: center;
 }
+
+/* NEW FORM CSS ABOVE*/
+
+/* -------------------------------------------------------- */
+
+/* TOOL CARD CSS BELOW */
+
+.card{
+  background: white;
+  color: black;
+  align-items: center;
+	justify-content: center;
+	margin-left: 100px;
+	margin-bottom: 20px;
+}
+
+img{
+	height: auto;
+  max-height: 250px;
+  width: auto;
+  max-width: 250px;
+	border: 2px solid black;
+	border-radius: 25px;
+	outline-color: black;
+	margin-bottom: 20px;
+}
+
+.delete{
+	background-color: red; /* Green */
+  border: none;
+  color: white;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+/* NEW FORM CSS ABOVE */

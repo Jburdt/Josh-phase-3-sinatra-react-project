@@ -11,9 +11,7 @@ const ToolCard = ({ tool, handleDeletedTool }) => {
   }
 
   return (
-   <> 
-    <div className='card-container'>  
-      <div className='Card'>
+      <div className='card'>
         <h2 className='tool-name'> Tool Name: {tool.name}</h2>
           <img className="tool-image" src={tool.img_url} alt={"tools"}/>
           <p className='description'>{tool.description}</p>
@@ -21,10 +19,7 @@ const ToolCard = ({ tool, handleDeletedTool }) => {
           <p className='price'>${tool.price}</p>
           {/* <p className='category'>{tool.category}</p> */}
           <button onClick={(handleDelete)} type='submit' className='delete'>Rent Me!</button>
-          {/* <br></br> */}
       </div>
-    </div>
-   </> 
   )
 }
 
