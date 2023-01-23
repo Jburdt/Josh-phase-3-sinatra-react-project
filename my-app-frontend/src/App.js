@@ -26,16 +26,22 @@ const App = () => {
     setTools([...tools, newTool])
   };
 
-  const deletedTool = (id) => {
-    setTools(tools.filter(tool => tool.id !== id))
+  // const deletedTool = (id) => {
+  //   setTools(tools.filter(tool => tool.id !== id))
+  // }
+
+  const handleDeletedTool = (deletedTool) => {
+    const filteredTools = tools.filter(tool => tool.id !== deletedTool.id)
+    setTools(filteredTools)
   }
+
 
   return (
     <Router>
      <NavBar />
       <Routes> 
       <Route exact path='/' element={<Home />} />
-      <Route exact path='/tools' element={<ToolList deletedTool= {deletedTool} tools = {tools} />}/>
+      <Route exact path='/tools' element={<ToolList /*deletedTool= {deletedTool}*/ handleDeletedTool={ handleDeletedTool } tools = { tools } />}/>
       <Route exact path='/add-new/tools' element={<NewToolForm handleSubmit = {addTool} tools = {tools} />} />
     </Routes>
     </Router>

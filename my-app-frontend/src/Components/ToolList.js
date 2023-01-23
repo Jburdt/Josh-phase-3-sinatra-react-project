@@ -1,7 +1,7 @@
 import React from 'react';
 import ToolCard from './ToolCard';
 
-const ToolList = ({ tools, deletedTool }) => {
+const ToolList = ({ tools, handleDeletedTool }) => {
   return (
     <>
           <main>
@@ -11,7 +11,7 @@ const ToolList = ({ tools, deletedTool }) => {
                     <ToolCard
                     tool={tool}
                     key={tool.id}
-                    deletedTool={deletedTool}
+                    handleDeletedTool={handleDeletedTool}
                     />
                   )
                 })}

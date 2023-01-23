@@ -1,15 +1,14 @@
 import React from 'react';
 
-const ToolCard = ({ tool, deletedTool }) => {
+const ToolCard = ({ tool, handleDeletedTool }) => {
 
-  function handleDelete() {
+  const handleDelete = () => {
     fetch(`http://localhost:9292/tools/${tool.id}`, {
       method: "DELETE",
     })
       .then((r) => r.json())
-      .then((deletedTool) => console.log("deleted tool"));
+      .then(() => handleDeletedTool(tool));
   }
-
 
   return (
    <> 
@@ -20,7 +19,7 @@ const ToolCard = ({ tool, deletedTool }) => {
           <p className='description'>{tool.description}</p>
           <p className='condition'>{tool.condition}</p>
           <p className='price'>${tool.price}</p>
-          <button onClick={handleDelete} type='submit' className='rent-btn'>Rent Me!</button>
+          <button onClick={(handleDelete)} type='submit' className='delete'>Rent Me!</button>
           <br></br>
       </div>
     </div>
