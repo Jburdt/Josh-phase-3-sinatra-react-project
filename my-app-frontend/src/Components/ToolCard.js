@@ -8,7 +8,11 @@ const ToolCard = ({ tool, handleDeletedTool }) => {
     })
       .then((r) => r.json())
       .then(() => handleDeletedTool(tool));
-  }
+  };
+
+  const message = (e) => {
+    alert('This will delete the tool!')
+  }; 
 
   return (
       <div className='card'>
@@ -18,7 +22,7 @@ const ToolCard = ({ tool, handleDeletedTool }) => {
           <p className='condition'>{tool.condition}</p>
           <p className='price'>${tool.price}</p>
           {/* <p className='category'>{tool.category}</p> */}
-          <button onClick={(handleDelete)} type='submit' className='delete'>Rent Me!</button>
+          <button onMouseEnter={message} onClick={(handleDelete)} type='submit' className='delete'>Rent Me!</button>
           <button onClick={(null)} type='submit' className='edit-btn'>Edit Tool</button>
       </div>
   )
