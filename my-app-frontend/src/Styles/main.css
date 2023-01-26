@@ -132,6 +132,22 @@ input{
 
 /* TOOL CARD CSS BELOW */
 
+.description{
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: x-large;
+}
+
+.condition{	
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: x-large;
+}
+
+.price{
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: x-large;
+	margin-bottom: 20px;
+}
+
 .card{
   background: white;
   color: black;
@@ -153,7 +169,7 @@ img{
 }
 
 .delete{
-	background-color: red; /* Green */
+	background-color: red; 
   border: none;
   color: white;
   padding: 5px 15px;
@@ -161,6 +177,8 @@ img{
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+	border-radius: 22px;
+
 }
 
 /* NEW FORM CSS ABOVE */
@@ -176,3 +194,20 @@ img{
 }
 
 /* HOME PAGE CSS ABOVE */
+
+/* EDIT BUTTON CSS BELOW  */
+
+.edit-btn{
+	background-color: blue; 
+  border: none;
+  color: white;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+	margin-left: 2px;
+	border-radius: 22px;
+}
+
+/* EDIT BUTTON CSS ABOVE  */
