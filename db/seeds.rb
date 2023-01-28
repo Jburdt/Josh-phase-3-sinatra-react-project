@@ -26,5 +26,4 @@ tool_12 = Tool.create(name: "Clamp", category_id: category_2.id, price: 15, desc
 tool_13 = Tool.create(name: "Pliers", category_id: category_2.id, price: 10, description: "Remover", condition: "New", img_url: "http://mobileimages.lowes.com/productimages/f2bdbd8b-2ee5-46da-ba15-2b33fb6df1f6/03300356.jpg")
 tool_14 = Tool.create(name: "Pry Bar", category_id: category_2.id, price: 17, description: "Pry", condition: "New", img_url: "http://mobileimages.lowes.com/productimages/7548895e-305e-4cfb-8582-ec65fc169c5f/02950585.jpg")
 
-
 puts "✅ Done seeding!"

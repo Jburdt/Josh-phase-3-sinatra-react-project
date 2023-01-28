@@ -13,8 +13,9 @@ class ApplicationController < Sinatra::Base
   end
 
   patch "/tools/:id" do 
-    tool = Tools.find(params[:id])
-    tool.update(name: params[:name], price: params[:price], description: params[:description], condition: params[:condition])
+    tool = Tool.update(params[:id])
+    # tool.update(name: params[:name], price: params[:price], description: params[:description], condition: params[:condition])
+    tool.update(category: params[:category])
     tool.to_json
   end
 
@@ -25,3 +26,13 @@ class ApplicationController < Sinatra::Base
   end
     
 end
+
+
+# patch "/tools/:id" do 
+#   tool = Tool.update(params[:id])
+#   if @tool.update(params)
+#     @tool.to_json(include: :category)
+#   else
+#     { errors: @tool.errors.full_message }.to_json
+#   end
+# end

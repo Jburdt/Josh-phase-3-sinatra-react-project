@@ -32,6 +32,12 @@ const App = () => {
     setTools(filteredTools)
   }
 
+  const handleUpdate = () => {
+    // const handTools = tools.filter(tool => tool.category !== "Hand tools")
+    // setTools(handTools)
+    console.log('hi')
+  };
+
   // useEffect(() => {
   //   fetch('http://localhost:9292/categories')
   // }, [])
@@ -41,7 +47,7 @@ const App = () => {
      <NavBar />
       <Routes> 
       <Route exact path='/' element={<Home />} />
-      <Route exact path='/tools' element={<ToolList handleDeletedTool={ handleDeletedTool } tools = { tools } />}/>
+      <Route exact path='/tools' element={<ToolList handleDeletedTool={ handleDeletedTool } tools = { tools } powerTools={handleUpdate}/>}/>
       <Route exact path='/add-new/tools' element={<NewToolForm handleSubmit = {addTool} tools = {tools} /*categories = {categories}*/ />} />
     </Routes>
     </Router>

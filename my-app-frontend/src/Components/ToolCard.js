@@ -11,11 +11,17 @@ const ToolCard = ({ tool, handleDeletedTool }) => {
   };
 
   const message = (e) => {
-    alert('This will delete the tool!')
+    // alert('This will delete the tool!')
+    console.log("hi")
   }; 
 
+  const handleUpdate = (e) => {
+    console.log('Hi')
+  };
+
   return (
-      <div className='card'>
+    <div className='card'>
+        <button onClick={handleUpdate} className='hand-tools'>Hand tools</button>
         <h2 className='tool-name'> Tool Name: {tool.name}</h2>
           <img className="tool-image" src={tool.img_url} alt={"tools"}/>
           <p className='description'>{tool.description}</p>
@@ -23,7 +29,7 @@ const ToolCard = ({ tool, handleDeletedTool }) => {
           <p className='price'>${tool.price}</p>
           {/* <p className='category'>{tool.category}</p> */}
           <button onMouseEnter={message} onClick={(handleDelete)} type='submit' className='delete'>Rent Me!</button>
-          <button onClick={(null)} type='submit' className='edit-btn'>Edit Tool</button>
+          {/* <button onClick={(null)} type='submit' className='edit-btn'>Edit Tool</button> */}
       </div>
   )
 }
