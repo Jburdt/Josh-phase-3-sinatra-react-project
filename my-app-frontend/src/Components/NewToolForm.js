@@ -39,8 +39,8 @@ const NewToolForm = ({ addTool, categories}) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    let newTool = { name: name, img_url: img_url, condition: img_url, description: description };
-
+    let newTool = { name: name, img_url: img_url, condition: condition, price: price, description: description };
+  
     fetch("http://localhost:9292/tools", {
       method: 'POST',
       headers: {

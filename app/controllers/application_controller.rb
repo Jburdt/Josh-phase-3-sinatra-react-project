@@ -3,7 +3,7 @@ class ApplicationController < Sinatra::Base
   
   # Add your routes here
   post "/tools" do
-    tool = Tool.create(name: params[:name], price: params[:price], description: params[:description], condition: params[:condition])
+    tool = Tool.create(name: params[:name], price: params[:price], img_url: params[:img_url], description: params[:description], condition: params[:condition])
     tool.to_json( include: :categories)
   end
 

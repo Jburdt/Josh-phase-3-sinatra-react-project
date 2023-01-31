@@ -15,21 +15,16 @@ const ToolCard = ({ tool, handleDeletedTool }) => {
     console.log("hi")
   }; 
 
-  const handleUpdate = (e) => {
-    console.log('Hi')
-  };
-
   return (
     <div className='card'>
-        <button onClick={handleUpdate} className='hand-tools'>Hand tools</button>
         <h2 className='tool-name'> Tool Name: {tool.name}</h2>
           <img className="tool-image" src={tool.img_url} alt={"tools"}/>
           <p className='description'>{tool.description}</p>
           <p className='condition'>{tool.condition}</p>
           <p className='price'>${tool.price}</p>
-          {/* <p className='category'>{tool.category}</p> */}
+          <p className="likes"> Likes: {tool.likes} </p>
           <button onMouseEnter={message} onClick={(handleDelete)} type='submit' className='delete'>Rent Me!</button>
-          {/* <button onClick={(null)} type='submit' className='edit-btn'>Edit Tool</button> */}
+          <button onClick={(null)} type='submit' className='edit-btn'>Edit Tool</button>
       </div>
   )
 }

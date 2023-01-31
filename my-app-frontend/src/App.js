@@ -48,7 +48,7 @@ const App = () => {
       <Routes> 
       <Route exact path='/' element={<Home />} />
       <Route exact path='/tools' element={<ToolList handleDeletedTool={ handleDeletedTool } tools = { tools } powerTools={handleUpdate}/>}/>
-      <Route exact path='/add-new/tools' element={<NewToolForm handleSubmit = {addTool} tools = {tools} /*categories = {categories}*/ />} />
+      <Route exact path='/add-new/tools' element={<NewToolForm addTool = {addTool} tools = {tools} /*categories = {categories}*/ />} />
     </Routes>
     </Router>
   );

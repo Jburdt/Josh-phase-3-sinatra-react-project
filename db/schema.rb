@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_01_20_174321) do
+ActiveRecord::Schema.define(version: 2023_01_31_174240) do
 
   create_table "categories", force: :cascade do |t|
     t.string "category"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2023_01_20_174321) do
     t.string "condition"
     t.string "img_url"
     t.integer "category_id"
+    t.integer "likes", default: 0
   end
 
 end
