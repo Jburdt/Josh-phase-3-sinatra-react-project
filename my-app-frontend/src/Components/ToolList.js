@@ -1,7 +1,7 @@
 import React from 'react';
 import ToolCard from './ToolCard';
 
-const ToolList = ({ tools, handleDeletedTool, handleUpdate }) => {
+const ToolList = ({tools, handleDeletedTool, handleUpdate, editLikes }) => {
   return (
     <>
           <main>
@@ -9,6 +9,7 @@ const ToolList = ({ tools, handleDeletedTool, handleUpdate }) => {
                 {tools.map((tool) => {
                   return( 
                     <ToolCard
+                    editLikes={editLikes}
                     tool={tool}
                     key={tool.id}
                     handleDeletedTool={handleDeletedTool}

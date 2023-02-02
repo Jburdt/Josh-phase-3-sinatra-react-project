@@ -9,7 +9,6 @@ import NewToolForm from './Components/NewToolForm';
 const App = () => {
 
   const [tools, setTools] = useState([]);
-  // const [categories, setCategories] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:9292/tools")
@@ -30,25 +29,26 @@ const App = () => {
   const handleDeletedTool = (deletedTool) => {
     const filteredTools = tools.filter(tool => tool.id !== deletedTool.id)
     setTools(filteredTools)
-  }
-
-  const handleUpdate = () => {
-    // const handTools = tools.filter(tool => tool.category !== "Hand tools")
-    // setTools(handTools)
-    console.log('hi')
   };
 
-  // useEffect(() => {
-  //   fetch('http://localhost:9292/categories')
-  // }, [])
+  const editLikes = (newTool) => {
+    const updatedLikes = tools.map(tool => {
+      if( newTool.id === tool.id) {
+        return newTool
+      } else {
+        return tool
+      }
+    })
+    setTools(updatedLikes)
+  };
 
   return (
     <Router>
      <NavBar />
       <Routes> 
       <Route exact path='/' element={<Home />} />
-      <Route exact path='/tools' element={<ToolList handleDeletedTool={ handleDeletedTool } tools = { tools } powerTools={handleUpdate}/>}/>
-      <Route exact path='/add-new/tools' element={<NewToolForm addTool = {addTool} tools = {tools} /*categories = {categories}*/ />} />
+      <Route exact path='/tools' element={<ToolList handleDeletedTool={ handleDeletedTool } tools = { tools } editLikes={editLikes} />}/>
+      <Route exact path='/add-new/tools' element={<NewToolForm addTool = {addTool} tools = {tools} />} />
     </Routes>
     </Router>
   );

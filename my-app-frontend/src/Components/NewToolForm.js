@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const NewToolForm = ({ addTool, categories}) => {
+const NewToolForm = ({ addTool }) => {
 
   const [name, SetName] = useState('');
   const [img_url, SetImg_url] = useState('');
@@ -67,9 +67,6 @@ const NewToolForm = ({ addTool, categories}) => {
       <select>
         <option value="Hand Tool"> Hand Tool</option>
         <option value="Power Tool"> Power Tool</option>
-        {/* {categories.map(category => {
-          <option key={category}> </option>
-        })} */}
       </select>
         <button type="submit" variant="contained" color="default" className="upload">Upload New Tool</button>
     </form>
