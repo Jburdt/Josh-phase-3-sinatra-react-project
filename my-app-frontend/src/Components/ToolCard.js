@@ -7,11 +7,7 @@ const ToolCard = ({ tool, handleDeletedTool, editLikes }) => {
       .then((r) => r.json())
       .then(() => handleDeletedTool(tool));
   };
-
-  const message = (e) => {
-    alert('This will delete the tool!')
-  }; 
-
+  
   const handleLikeUpdate = () => {
     fetch(`http://localhost:9292/tools/${tool.id}`, {
       method: 'PATCH',
@@ -36,7 +32,7 @@ const ToolCard = ({ tool, handleDeletedTool, editLikes }) => {
           <p className='condition'>{tool.condition}</p>
           <p className='price'>${tool.price}</p>
           <p className="likes"> Likes: {tool.likes}</p>
-          <button onMouseEnter={message} onClick={(handleDelete)} type='submit' className='delete'>Rent Me!</button>
+          <button onClick={(handleDelete)} type='submit' className='delete'>Rent Me!</button>
           <button onClick={(handleLikeUpdate)} type='submit' className='like-btn'>Like Tool</button>
       </div>
   )
