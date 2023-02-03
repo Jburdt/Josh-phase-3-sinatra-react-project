@@ -1,6 +1,6 @@
 # Tool Rental Project Phase 3
 
-This project was built to show case what I have learned during Phase 3 at Flatiron school. This is a web application where contractors can rent tool's and also leave reveiws on the tool it's self. 
+This project was built to show case what I have learned during Phase 3 at Flatiron school. This is a web application where anyone can rent tool's and also like the tool or delete the tool from the application.  
 
 ### What I learned
   - How to build modles
